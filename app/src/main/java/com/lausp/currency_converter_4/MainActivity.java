@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     double results;
     ImageView money_bag;
     EditText addAmount2;
+    EditText rate;
 
 
 
@@ -28,8 +29,10 @@ public class MainActivity extends AppCompatActivity {
         addAmount1 = (EditText) findViewById(R.id.first);
         money_bag = (ImageView) findViewById(R.id.moneyBag);
         addAmount2 = (EditText) findViewById(R.id.second);
+        rate  = (EditText) findViewById(R.id.third);
         result = (TextView) findViewById(R.id.result);
         results =0;
+        // obtain rate add set to rate edit text
 
     }
     public void show(View v) {// money bag appears
@@ -40,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
     public void reset(View v){ // on click resets to empty
         addAmount2.setText("");
         addAmount1.setText("");
+        rate.setText("");
         show(v);
         result.setText("");
     }
@@ -64,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void convertToLBP(View v) {// converts to lbp if digit
 
-        String given = addAmount1.getText().toString();
+       /** String given = addAmount1.getText().toString();
         if (isDouble(given)) {
             double amount = Integer.parseInt(addAmount1.getText().toString());
             results = amount * 22000;
@@ -80,13 +84,13 @@ public class MainActivity extends AppCompatActivity {
         else{
             Toast.makeText(getApplicationContext(), "Invalid input", Toast.LENGTH_SHORT).show();
         }
-
+*/
     }
 
 
 
     public void convertToDollars(View v){ //convert to dollars if digit
-        String given = addAmount2.getText().toString();
+       /** String given = addAmount2.getText().toString();
         if (isDouble(given)) {
             double amount = Double.parseDouble(addAmount2.getText().toString());
             results = ((amount) / 22000);
@@ -104,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-
+*/
 
     }
 
