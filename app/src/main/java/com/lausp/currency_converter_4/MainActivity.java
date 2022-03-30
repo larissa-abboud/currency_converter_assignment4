@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -17,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView money_bag;
     EditText addAmount2;
     EditText rate;
+    WebView view;
 
 
 
@@ -33,6 +36,12 @@ public class MainActivity extends AppCompatActivity {
         result = (TextView) findViewById(R.id.result);
         results =0;
         // obtain rate add set to rate edit text
+        view  = (WebView) findViewById(R.id.web);
+        view.getSettings().setJavaScriptEnabled(true);
+        view.setWebViewClient(new WebViewClient());//calling a website outside our local database
+        view.loadUrl("https://lirarate.org/");//connect to internet , permisison restricction
+
+
 
     }
     public void show(View v) {// money bag appears
