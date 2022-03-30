@@ -39,7 +39,9 @@ public class MainActivity extends AppCompatActivity {
         view  = (WebView) findViewById(R.id.web);
         view.getSettings().setJavaScriptEnabled(true);
         view.setWebViewClient(new WebViewClient());//calling a website outside our local database
-        view.loadUrl("https://lirarate.org/");//connect to internet , permisison restricction
+        //view.loadUrl("https://lirarate.org/");//connect to internet , permisison restricction
+        view.loadData("<html><body><h1> hello world </html></body></h1> ", "text/html ; charset=UTF-8",null);
+        //acces lbp rate in website ,use static to convert by parsing
 
 
 
