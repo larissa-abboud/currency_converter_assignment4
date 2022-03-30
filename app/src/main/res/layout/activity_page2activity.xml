@@ -10,6 +10,7 @@
         android:id="@+id/next"
         android:layout_width="148dp"
         android:layout_height="141dp"
+        android:onClick="pageOne"
         android:text="Next"
         tools:layout_editor_absoluteX="131dp"
         tools:layout_editor_absoluteY="359dp" />
