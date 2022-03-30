@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Currency_converter_4">
         <activity
+            android:name=".Page2activity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
