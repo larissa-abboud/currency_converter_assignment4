@@ -12,7 +12,7 @@ $query->execute();
 
 $response = [];
 $response["status"] = "obtained";
-echo $rate;
+echo $rate * $amount_rec;
 $json_response = json_encode($response);
 echo $json_response;
 
