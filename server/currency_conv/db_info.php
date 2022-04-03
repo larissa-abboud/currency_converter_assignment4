@@ -1,6 +1,6 @@
 <?php
 //connected to the database
-$db_host = "localhost";
+$db_host = "192.168.1.109";
 $db_user = "root";
 $db_pass = null;
 $db_name = "currencydb";
