@@ -27,5 +27,5 @@ $rate =$string["10"].$string["11"]. $string["13"]. $string["14"]. $string["15"].
 }
 
 echo json_encode($rate);
-//obtain rate using php from website get api
+//obtain rate using php from website :get api
 ?>
