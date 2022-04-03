@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
         view.loadData("<html><body><h1> hello world </html></body></h1> ", "text/html ; charset=UTF-8",null);
         //acces lbp rate in website ,use static to convert by parsing"http://localhost/currency_converter_assignment4/server/currency_conv/api_web.php";
 
-        String url = "https://api.chucknorris.io/jokes/random";
+        String url = "http://localhost/currency_converter_assignment4/server/currency_conv/api_web.php";
         // php to AS
         DownloadTask task = new DownloadTask();
         task.execute(url);
