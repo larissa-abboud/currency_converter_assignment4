@@ -26,6 +26,24 @@ $rate =$string["10"].$string["11"]. $string["13"]. $string["14"]. $string["15"];
 //echo $rate;
 }
 $array["rate"] =$rate;
+include("db_info.php");
+/**$id = $_GET["rate_id"]; //would let me retreive the code from the URL i.e: ?course_id=4
+
+$query = $mysqli->prepare("SELECT * FROM rate WHERE id = ?");
+$query->bind_param("i", $id);
+$query->execute();
+
+$array = $query->get_result();
+
+$response = [];
+
+while($course = $array->fetch_assoc()){
+    $response[] = $course;
+}
+
+$json_response = json_encode($response);
+echo $json_response; */
+
 echo json_encode($array);
 //obtain rate using php from website :get api
 ?>

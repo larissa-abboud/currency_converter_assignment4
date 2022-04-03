@@ -14,6 +14,7 @@ while($rate = $array->fetch_assoc()){
 }
 $json_response = json_encode($response);
 echo $json_response;
-
+//api fetches data from database
+// front end will call this api and retrive data
 
 ?>
