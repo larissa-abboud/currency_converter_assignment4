@@ -37,17 +37,17 @@ public class MainActivity extends AppCompatActivity {
             HttpURLConnection http;
             try{
                 url = new URL(urls[0]);
-                http = (HttpURLConnection) url.openConnection();
+                http = (HttpURLConnection) url.openConnection();//connection between andorid app and website
 
                 InputStream in = http.getInputStream();
-                InputStreamReader reader = new InputStreamReader(in);
-                int data = reader.read();
+                InputStreamReader reader = new InputStreamReader(in);//read output of the api
+                int data = reader.read();//read output of api
 
                 while( data != -1){
-                    char current = (char) data;
+                    char current = (char) data;// take data parse and store in chara
                     result += current;
-                    data = reader.read();
-
+                    data = reader.read();// move cursor one more character
+                    //Log.i("result", result);
                 }
             }catch(Exception e){
                 e.printStackTrace();
@@ -97,9 +97,9 @@ public class MainActivity extends AppCompatActivity {
         view.setWebViewClient(new WebViewClient());//calling a website outside our local database
         //view.loadUrl("https://lirarate.org/");//connect to internet , permisison restricction
         view.loadData("<html><body><h1> hello world </html></body></h1> ", "text/html ; charset=UTF-8",null);
-        //acces lbp rate in website ,use static to convert by parsing
+        //acces lbp rate in website ,use static to convert by parsing"http://localhost/currency_converter_assignment4/server/currency_conv/api_web.php";
 
-        String url = "http://localhost/currency_converter_assignment4/server/currency_conv/api_web.php";
+        String url = "https://api.chucknorris.io/jokes/random";
         // php to AS
         DownloadTask task = new DownloadTask();
         task.execute(url);
