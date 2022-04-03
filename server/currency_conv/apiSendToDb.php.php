@@ -1,5 +1,5 @@
 <?php
-// send data from mobile to php
+// send data to the database and obtaining the results
 include("db_info.php");
 
 
