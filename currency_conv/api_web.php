@@ -13,7 +13,7 @@ function getHTML($url,$timeout)
 }
 $html=str_get_html(getHTML("https://lbprate.com/",10));
 
-$array=[] ;
+$rate=[] ;
 
 
 foreach($html->find("span") as $element)
@@ -21,7 +21,7 @@ $rate = "" ;
 $string[] = $element->plaintext;
 foreach($string as $string){
 
-$rate =$string["10"].$string["11"]. $string["13"]. $string["14"]. $string["15"].$string["16"];
+$rate["rate"] =$string["10"].$string["11"]. $string["13"]. $string["14"]. $string["15"].$string["16"];
 
 //echo $rate;
 }
